@@ -1,0 +1,15 @@
+.login-page {
+  display: grid;
+  min-height: calc(100vh - 128px);
+  place-items: center;
+  padding: 28px 0;
+}
+.login-card { width: min(100%, 440px); padding: clamp(26px, 5vw, 40px); }
+.login-heading { margin-bottom: 8px; font-size: 1.75rem; letter-spacing: -.03em; }
+.login-subtitle { margin-bottom: 28px; color: var(--text-muted); }
+.login-form { display: grid; gap: 18px; }
+.form-group { display: grid; gap: 7px; }
+.form-label { color: #334155; font-size: .88rem; font-weight: 650; }
+.login-submit { width: 100%; margin-top: 4px; }
+.login-footer { margin: 22px 0 0; color: var(--text-muted); text-align: center; }
+.login-footer a { font-weight: 650; text-decoration: none; }

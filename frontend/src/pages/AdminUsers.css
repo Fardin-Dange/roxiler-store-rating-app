@@ -1,0 +1,92 @@
+.admin-users-search { flex: 1 1 320px; max-width: 520px; }
+.admin-users-sort { width: 170px; }
+.admin-users-action { padding: 7px 12px; min-height: 34px; }
+.admin-row-actions { display: flex; align-items: center; gap: 8px; }
+.filter-card {
+  margin-bottom: 20px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+}
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.filter-group .form-label { margin-bottom: 8px; }
+.filter-reset { min-height: 40px; }
+@media (max-width: 840px) {
+  .filter-grid { grid-template-columns: 1fr; }
+}
+.user-address { min-width: 220px; max-width: 360px; }
+.user-modal { position: relative; }
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0;
+}
+.modal-close::before { content: "\00d7"; font-size: 1.35rem; line-height: 1; }
+.modal-close:hover { color: var(--text); background: #f1f5f9; }
+.user-modal-title { margin-bottom: 22px; padding-right: 40px; font-size: 1.3rem; }
+.user-modal p {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.user-modal p:last-child { border-bottom: 0; }
+.user-details { display: grid; gap: 0; margin: 0; }
+.user-detail-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.user-detail-row:last-child { border-bottom: 0; }
+.user-detail-row dt { color: var(--text-muted); font-weight: 600; }
+.user-detail-row dd { margin: 0; overflow-wrap: anywhere; }
+.delete-confirmation-modal { max-width: 440px; }
+.delete-confirmation-modal h2 { margin-bottom: 10px; font-size: 1.35rem; }
+.delete-confirmation-modal > p { margin-bottom: 8px; color: var(--text-muted); }
+.delete-confirmation-modal .delete-target-name {
+  margin-bottom: 24px;
+  color: var(--text);
+  font-weight: 700;
+}
+.delete-modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.success-message {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+}
+.create-user-modal { position: relative; max-width: 560px; max-height: calc(100vh - 40px); overflow-y: auto; }
+.create-user-modal h2 { margin-bottom: 5px; font-size: 1.4rem; }
+.create-modal-description { margin-bottom: 22px; color: var(--text-muted); }
+.admin-create-form { display: grid; gap: 16px; }
+.admin-create-form .form-group { display: grid; gap: 7px; }
+.admin-create-form .form-label { color: #334155; font-size: .88rem; font-weight: 650; }
+.admin-form-textarea { min-height: 88px; resize: vertical; }
+.create-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+@media (max-width: 640px) {
+  .admin-users-search, .admin-users-sort { width: 100%; max-width: none; }
+  .user-detail-row { grid-template-columns: 1fr; gap: 3px; }
+  .create-modal-actions { flex-direction: column-reverse; }
+  .create-modal-actions .btn { width: 100%; }
+}

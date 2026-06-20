@@ -1,0 +1,12 @@
+.signup-page {
+  display: grid;
+  min-height: calc(100vh - 128px);
+  place-items: center;
+  padding: 28px 0;
+}
+.signup-card { width: min(100%, 520px); padding: clamp(26px, 5vw, 40px); }
+.signup-heading { margin-bottom: 8px; font-size: 1.75rem; letter-spacing: -.03em; }
+.signup-subtitle { margin-bottom: 28px; color: var(--text-muted); }
+.signup-form { display: grid; gap: 17px; }
+.signup-submit { width: 100%; margin-top: 4px; }
+.signup-footer { margin: 20px 0 0; color: var(--text-muted); text-align: center; }

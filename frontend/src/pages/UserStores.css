@@ -1,0 +1,22 @@
+.user-stores-search { flex: 1 1 320px; max-width: 520px; }
+.user-stores-sort { width: 170px; }
+.stores-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.store-card { display: flex; flex-direction: column; padding: 22px; }
+.store-card-header { padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.store-card-name { margin-bottom: 5px; color: var(--text); font-size: 1.08rem; }
+.store-card-address { margin: 0; color: var(--text-muted); }
+.store-rating-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 18px 0; }
+.rating-summary-item { padding: 12px; background: #f8fafc; border-radius: 8px; }
+.rating-summary-label { display: block; margin-bottom: 3px; color: var(--text-muted); font-size: .75rem; font-weight: 650; }
+.rating-summary-value { color: var(--text); font-size: 1.15rem; font-weight: 750; }
+.rating-control { display: flex; gap: 10px; margin-top: auto; }
+.rating-control .select { flex: 1; }
+@media (max-width: 850px) {
+  .stores-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .user-stores-search, .user-stores-sort { width: 100%; max-width: none; }
+}
+@media (max-width: 400px) {
+  .rating-control { flex-direction: column; }
+}

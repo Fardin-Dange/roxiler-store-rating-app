@@ -1,0 +1,84 @@
+.admin-stores-search { flex: 1 1 320px; max-width: 520px; }
+.admin-stores-sort { width: 170px; }
+.store-email { min-width: 210px; }
+.filter-card {
+  margin-bottom: 20px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+}
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.filter-group .form-label { margin-bottom: 8px; }
+.filter-reset { min-height: 40px; }
+@media (max-width: 840px) {
+  .filter-grid { grid-template-columns: 1fr; }
+}
+.store-address-cell { min-width: 240px; max-width: 420px; }
+.store-actions-cell { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.rating-value { color: #b45309; font-weight: 750; }
+.admin-store-view,
+.admin-store-delete { min-height: 34px; padding: 7px 12px; }
+.success-message {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+}
+.store-delete-modal { max-width: 440px; }
+.store-delete-modal h2 { margin-bottom: 10px; font-size: 1.35rem; }
+.store-delete-modal > p { margin-bottom: 8px; color: var(--text-muted); }
+.store-delete-modal .delete-target-name {
+  margin-bottom: 24px;
+  color: var(--text);
+  font-weight: 700;
+}
+.store-delete-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.create-store-modal { position: relative; max-width: 560px; max-height: calc(100vh - 40px); overflow-y: auto; }
+.create-store-modal h2 { margin-bottom: 5px; font-size: 1.4rem; }
+.create-store-description { margin-bottom: 22px; color: var(--text-muted); }
+.store-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.store-modal-close:hover { color: var(--text); background: #f1f5f9; }
+.store-create-form { display: grid; gap: 16px; }
+.store-create-form .form-group { display: grid; gap: 7px; }
+.store-create-form .form-label { color: #334155; font-size: .88rem; font-weight: 650; }
+.store-form-textarea { min-height: 88px; resize: vertical; }
+.form-help { color: var(--text-muted); font-size: .8rem; }
+.store-create-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+.store-details-modal { position: relative; max-width: 560px; width: min(100%, 560px); max-height: calc(100vh - 40px); overflow-y: auto; padding: 28px 28px 24px; }
+.store-details-grid { display: grid; gap: 14px; margin-top: 18px; }
+.store-details-row { display: grid; grid-template-columns: 1fr 1.35fr; gap: 12px; padding: 12px 14px; border-radius: 12px; background: #f8fafc; }
+.store-details-row span:first-child { color: #475569; font-weight: 600; }
+.store-details-row span:last-child { color: #0f172a; }
+.modal-overlay { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: rgba(15, 23, 42, 0.7); padding: 20px; }
+.modal { background: #ffffff; border-radius: 20px; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18); width: 100%; }
+.store-modal-close { position: absolute; top: 18px; right: 18px; display: grid; width: 34px; height: 34px; place-items: center; color: #64748b; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; font-size: 1.35rem; line-height: 1; }
+.store-modal-close:hover { color: #0f172a; background: #f1f5f9; }
+@media (max-width: 640px) {
+  .admin-stores-search, .admin-stores-sort { width: 100%; max-width: none; }
+  .store-create-actions { flex-direction: column-reverse; }
+  .store-create-actions .btn { width: 100%; }
+  .store-details-modal { padding: 20px 18px 18px; }
+  .store-details-row { grid-template-columns: 1fr; }
+}

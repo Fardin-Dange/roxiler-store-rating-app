@@ -1,0 +1,65 @@
+.navbar { position: sticky; z-index: 100; top: 0; color: #fff; background: var(--navbar); }
+.navbar-inner {
+  display: flex;
+  max-width: 1440px;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -.02em;
+  text-decoration: none;
+}
+.navbar-brand-mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 8px;
+  font-size: .8rem;
+}
+.navbar-links { display: flex; align-items: center; gap: 8px; }
+.navbar-link,
+.navbar-change-password {
+  padding: 8px 10px;
+  color: #cbd5e1;
+  border-radius: 7px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .18s ease, background-color .18s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navbar-link:hover,
+.navbar-change-password:hover { color: #fff; background: rgba(255, 255, 255, .08); }
+.navbar-change-password { display: inline-flex; align-items: center; }
+.navbar-role {
+  margin-right: 4px;
+  padding: 5px 9px;
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, .2);
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.navbar-logout { min-height: 36px; padding: 7px 12px; color: #fff; background: transparent; border-color: #475569; }
+.navbar-logout:hover:not(:disabled) { color: #fff; background: #334155; border-color: #64748b; }
+@media (max-width: 640px) {
+  .navbar-inner { min-height: 58px; gap: 12px; padding: 0 16px; }
+  .navbar-brand-text, .navbar-role { display: none; }
+  .navbar-links { gap: 2px; }
+  .navbar-link { padding-inline: 8px; font-size: .9rem; }
+}
