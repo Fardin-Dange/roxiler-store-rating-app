@@ -8,7 +8,7 @@ const verifyToken = require("../middleware/authMiddleware");
 const roleMiddleware = require("../middleware/roleMiddleware");
 
 router.get(
-    "/owner/dashboard",
+    "/dashboard",
     verifyToken,
     roleMiddleware("store_owner"),
     getOwnerDashboard

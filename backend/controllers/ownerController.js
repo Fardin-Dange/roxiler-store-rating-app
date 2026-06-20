@@ -19,8 +19,11 @@ const getOwnerDashboard = (req, res) => {
             }
 
             if (storeResult.length === 0) {
-                return res.status(404).json({
-                    message: "Store Not Found"
+                return res.status(200).json({
+                    storeName: null,
+                    averageRating: 0,
+                    ratedUsers: [],
+                    message: "No Store Assigned"
                 });
             }
 

@@ -53,6 +53,6 @@ app.use(userRoutes);
 app.use(storeRoutes);
 app.use(adminRoutes);
 app.use(ratingRoutes);
-app.use(ownerRoutes);
+app.use('/owner', ownerRoutes);
 
 module.exports = app;
