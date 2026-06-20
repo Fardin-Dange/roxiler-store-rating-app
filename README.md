@@ -1,22 +1,22 @@
 # Store Rating Platform
 
-A Full Stack Web Application that allows users to rate stores registered on the platform. The application supports role-based access control for Administrators, Normal Users, and Store Owners.
+A Full Stack Web Application that allows users to submit and manage ratings for stores registered on the platform. The application implements role-based access control with three user roles: Administrator, Normal User, and Store Owner.
 
-Built as part of the Full Stack Intern Coding Challenge using React.js, Express.js, MySQL, JWT Authentication, and Node.js.
+Built using React.js, Express.js, MySQL, JWT Authentication, and Node.js as part of the Full Stack Developer Coding Challenge.
 
 ---
 
-# Features
+## Features
 
-## System Administrator
+### System Administrator
 
-### Dashboard
+#### Dashboard
 
 * View Total Users
 * View Total Stores
 * View Total Ratings
 
-### User Management
+#### User Management
 
 * Add Normal Users
 * Add Admin Users
@@ -24,107 +24,111 @@ Built as part of the Full Stack Intern Coding Challenge using React.js, Express.
 * View All Users
 * View User Details
 * Delete Users
-* Filter Users by:
 
-  * Name
-  * Email
-  * Address
-  * Role
-* Sort Users by:
+#### User Filters
 
-  * ID
-  * Name
-  * Email
-  * Address
-  * Role
+* Name
+* Email
+* Address
+* Role
 
-### Store Management
+#### User Sorting
+
+* ID
+* Name
+* Email
+* Address
+* Role
+
+#### Store Management
 
 * Add Stores
 * View Stores
 * View Store Details
 * Delete Stores
-* Filter Stores by:
 
-  * Store Name
-  * Email
-  * Address
-* Sort Stores by:
+#### Store Filters
 
-  * ID
-  * Name
-  * Email
-  * Address
+* Store Name
+* Email
+* Address
 
-### Account
+#### Store Sorting
+
+* ID
+* Name
+* Email
+* Address
+
+#### Account
 
 * Change Password
 * Logout
 
 ---
 
-## Normal User
+### Normal User
 
-### Authentication
+#### Authentication
 
 * Sign Up
 * Login
 
-### Store Features
+#### Store Features
 
-* View All Stores
+* View All Registered Stores
 * Search Stores by Name
 * Search Stores by Address
 * View Overall Store Rating
 * View Own Submitted Rating
-* Submit Rating (1-5)
+* Submit Rating (1–5)
 * Modify Existing Rating
 
-### Account
+#### Account
 
 * Change Password
 * Logout
 
 ---
 
-## Store Owner
+### Store Owner
 
-### Dashboard
+#### Dashboard
 
-* View Store Average Rating
-* View Users Who Rated Store
+* View Average Store Rating
+* View Users Who Submitted Ratings
 * View Submitted Ratings
 
-### Account
+#### Account
 
 * Change Password
 * Logout
 
 ---
 
-# Tech Stack
+## Technology Stack
 
-## Frontend
+### Frontend
 
 * React.js
 * React Router DOM
 * Axios
 * CSS
 
-## Backend
+### Backend
 
 * Node.js
 * Express.js
 * JWT Authentication
 * bcrypt
 
-## Database
+### Database
 
 * MySQL
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 Store_Rating_Platform/
@@ -156,51 +160,39 @@ Store_Rating_Platform/
 
 ---
 
-# Database Setup
+## Database Setup
 
-## Step 1: Create Database
+### Create Database
 
 ```sql
 CREATE DATABASE store_rating_platform;
 ```
 
----
-
-## Step 2: Import Schema
-
-Option 1
+### Import Schema
 
 ```bash
 mysql -u root -p store_rating_platform < database.sql
 ```
 
-Option 2 (MySQL Workbench)
-
-```text
-Server
-→ Data Import
-→ Import from Self-Contained File
-→ Select database.sql
-→ Start Import
-```
+Or import using MySQL Workbench.
 
 ---
 
-# Backend Setup
+## Backend Setup
 
-## Navigate to Backend
+### Navigate to Backend
 
 ```bash
 cd backend
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-## Create Environment File
+### Create Environment File
 
 Create:
 
@@ -215,34 +207,24 @@ PORT=5000
 JWT_SECRET=your_secret_key
 ```
 
----
-
-## Configure Database
+### Configure Database
 
 Update:
-
-```text
-backend/config/db.js
-```
-
-Example:
 
 ```javascript
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "your_password",
-    database: "store_rating_platform"
+  host: "localhost",
+  user: "root",
+  password: "your_password",
+  database: "store_rating_platform"
 });
 
 module.exports = db;
 ```
 
----
-
-## Start Backend Server
+### Start Backend Server
 
 ```bash
 npm run dev
@@ -256,21 +238,21 @@ http://localhost:5000
 
 ---
 
-# Frontend Setup
+## Frontend Setup
 
-## Navigate to Frontend
+### Navigate to Frontend
 
 ```bash
 cd frontend
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-## Start Frontend
+### Start Frontend
 
 ```bash
 npm run dev
@@ -284,9 +266,9 @@ http://localhost:5173
 
 ---
 
-# Authentication & Authorization
+## Authentication & Authorization
 
-JWT-based authentication is implemented.
+JWT-based Authentication is implemented.
 
 Supported Roles:
 
@@ -296,16 +278,17 @@ user
 store_owner
 ```
 
-Protected routes are secured using:
+Security includes:
 
 * JWT Middleware
-* Role-Based Authorization Middleware
+* Role-Based Authorization
+* Protected Routes
 
 ---
 
-# API Endpoints
+## API Endpoints
 
-## Authentication
+### Authentication
 
 | Method | Endpoint         |
 | ------ | ---------------- |
@@ -314,18 +297,14 @@ Protected routes are secured using:
 | PUT    | /change-password |
 | POST   | /logout          |
 
----
-
-## Ratings
+### Ratings
 
 | Method | Endpoint          |
 | ------ | ----------------- |
 | POST   | /ratings          |
 | PUT    | /ratings/:storeId |
 
----
-
-## Stores
+### Stores
 
 | Method | Endpoint          |
 | ------ | ----------------- |
@@ -334,9 +313,7 @@ Protected routes are secured using:
 | GET    | /admin/stores/:id |
 | DELETE | /admin/stores/:id |
 
----
-
-## Admin
+### Admin
 
 | Method | Endpoint         |
 | ------ | ---------------- |
@@ -346,9 +323,7 @@ Protected routes are secured using:
 | POST   | /admin/users     |
 | DELETE | /admin/users/:id |
 
----
-
-## Store Owner
+### Store Owner
 
 | Method | Endpoint         |
 | ------ | ---------------- |
@@ -356,9 +331,7 @@ Protected routes are secured using:
 
 ---
 
-# Validation Rules
-
-## User
+## Validation Rules
 
 ### Name
 
@@ -384,47 +357,66 @@ Protected routes are secured using:
 
 ### Ratings
 
-* Allowed Range:
+Allowed Values:
 
-  * 1
-  * 2
-  * 3
-  * 4
-  * 5
+```text
+1, 2, 3, 4, 5
+```
 
 ---
 
-# Screenshots
+## Demo Credentials
 
-Add screenshots before submission.
+### Administrator
 
-Recommended Screenshots:
+```text
+Email: admin@example.com
+Password: Admin@123
+```
+
+### Store Owner
+
+```text
+Email: owner@example.com
+Password: Owner@123
+```
+
+### Normal User
+
+```text
+Email: user@example.com
+Password: User@123
+```
+
+Update these credentials according to your database records before submission.
+
+---
+
+## Screenshots
+
+Add screenshots of:
 
 * Login Page
-* Signup Page
 * Admin Dashboard
-* Admin User Management
-* Admin Store Management
 * User Store Listing
-* Rating Submission
-* Owner Dashboard
-* Change Password Modal
+* Store Owner Dashboard
+* Rating Submission Screen
 
 ---
 
-# Security Features
+## Security Features
 
 * Password Hashing using bcrypt
 * JWT Authentication
 * Role-Based Access Control
 * Protected Routes
-* Unique User Rating Constraint
 * Input Validation
 * Form Validation
+* One Rating Per User Per Store Constraint
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 * Pagination
 * Email Verification
@@ -435,16 +427,14 @@ Recommended Screenshots:
 
 ---
 
-# Author
+## Author
 
-**Saleem Dange**
+Saleem Dange
 
-BE Computer Engineering
-
-2026 Batch
+BE Computer Engineering (2026 Batch)
 
 ---
 
-# License
+## License
 
-This project was developed for educational and internship assessment purposes.
+This project was developed for educational purposes and internship assessment evaluation.
