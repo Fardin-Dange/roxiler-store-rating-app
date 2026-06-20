@@ -362,7 +362,7 @@ Protected routes are secured using:
 
 ### Name
 
-* Minimum: 3 Characters
+* Minimum: 20 Characters
 * Maximum: 60 Characters
 
 ### Address
